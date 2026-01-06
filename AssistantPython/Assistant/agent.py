@@ -126,16 +126,6 @@ refinement_loop = LoopAgent(
     max_iterations=5,
 )
 
-root_agent = SequentialAgent(
-    name="arch_linux_helper",
-    sub_agents=[
-        init_agent,
-        generate_agent,
-        refinement_loop,
-    ],
-    description="Generates exactly one Arch Linux command based on the user's request.",
-)
-
 final_presenter_agent = Agent(
     model=get_model(),
     name="final_presenter",
@@ -153,3 +143,15 @@ final_presenter_agent = Agent(
     - Just the text.
     """,
 )
+
+sigma_agent = SequentialAgent(
+    name="arch_linux_helper",
+    sub_agents=[
+        init_agent,
+        generate_agent,
+        refinement_loop,
+        final_presenter_agent
+    ],
+    description="Generates exactly one Arch Linux command based on the user's request.",
+)
+
