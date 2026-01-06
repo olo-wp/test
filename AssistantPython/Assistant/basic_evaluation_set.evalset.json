@@ -1,0 +1,38 @@
+{
+  "eval_set_id": "basic_evaluation_set",
+  "name": "basic_evaluation_set",
+  "eval_cases": [
+    {
+      "eval_id": "case1",
+      "conversation": [
+        {
+          "invocation_id": "e-a948ec93-b4c1-49fc-9851-dea58367b63b",
+          "user_content": {
+            "parts": [
+              {
+                "text": "install nano"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "sudo pacman -S nano"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1767542966.70127
+        }
+      ],
+      "session_input": {
+        "app_name": "Assistant",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1767543002.204093
+    }
+  ],
+  "creation_timestamp": 1767542994.740097
+}
